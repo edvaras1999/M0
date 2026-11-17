@@ -8,6 +8,7 @@
 
 #include "skse/PluginAPI.h"
 #include "skse/skse_version.h"
+#include "skse/GameReferences.h"
 #include "Log.h"
 #include <shlobj.h>
 #include <stdio.h>
@@ -19,6 +20,10 @@
 #define PLUGIN_NAME        "NahIDWinCore"
 #define PLUGIN_VERSION_STR "0.1.0 (M0 hit probe)"
 #define PLUGIN_LOG_FILE    "\\My Games\\Skyrim\\SKSE\\NahIDWinCore.log"
+
+// O SKSE declara esta funcao (usada pelo GameMenus.cpp) mas nao a define nos ficheiros que compilamos.
+// Endereco da LE 1.9.32.0 (o mesmo usado no NahIDWin).
+const _LookupREFRByHandle LookupREFRByHandle = (_LookupREFRByHandle)0x004A9180;
 
 namespace
 {
